@@ -1,5 +1,8 @@
 <div>
-    <span>HJEM</span>
-    <span>PROGRAM</span>
-    <span>INFO</span>
+    {% url 'index' as index_url %}
+    <span>{% if request.path == index_url %}HJEM{% else %}<a href="{{ index_url }}">HJEM</a>{% endif %}</span>
+    {% url 'program' as program_url %}
+    <span>{% if request.path == program_url %}PROGRAM{% else %}<a href="{{ program_url }}">PROGRAM</a>{% endif %}</span>
+    {% url 'information' as information_url %}
+    <span>{% if request.path == information_url %}INFO{% else %}<a href="{{ information_url }}">INFO</a>{% endif %}</span>
 </div>
