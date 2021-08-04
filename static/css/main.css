@@ -8,3 +8,71 @@
         padding-top: calc(104px);
     }
 }
+
+@font-face{
+    font-family: "IVDagene";
+    src:
+    url("fonts/jaapokki-regular-webfont.woff") format("woff"),
+    url("fonts/jaapokki-Regular.otf") format("opentype");
+}
+
+.navbar-brand{
+    font-family: "IVDagene";
+}
+
+.iv-bg-primary {
+    background-color: #f26321;
+}
+.iv-bg-secondary {
+    background-color: #ffffff;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link{
+    color: #696969;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .2s, color .2s;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover{
+    color: #f26321;
+    border-color: #f26321;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active{
+    background: none;
+    color: #f26321;
+    border-color: #f26321;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active:hover{
+    background: none;
+    color: #f26321;
+}
+
+/*
+For changing logo size
+ */
+
+.masthead .masthead-avatar {
+    width: 340px;
+    height: 170px;
+}
+
+
+.masthead {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 992px){
+    .masthead {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.masthead{
+    background-image: url("images/ntnu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

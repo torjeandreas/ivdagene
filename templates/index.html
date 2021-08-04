@@ -4,8 +4,42 @@
 {% block title %}Home{% endblock%}
 
 {% block content%}
+<!-- Masthead-->
 
+        <header class="masthead text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <p class="masthead-avatar mb-5" id="timer" alt="..."></p>
+
+                <!-- Masthead Avatar Image-->
+                <!--<img class="masthead-avatar mb-5" src="static/css/images/ivdagene-logo.png" alt="..." />-->
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">IVDAGENE</h1>
+
+            </div>
+        </header>
 <h1>
-    Template Homepage
+    Homepage
 </h1>
 {% endblock %}
+
+<script>
+var countDownDate = new Date("Mar 2, 2022 12:00:00").getTime();
+
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m "
+    + seconds + "s ";
+
+    if(distance < 0){
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
