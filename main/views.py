@@ -12,3 +12,7 @@ def information(request: HttpRequest) -> HttpResponse:
 
 def program(request: HttpRequest) -> HttpResponse:
     return render(request, 'program.html')
+
+
+def registration(request: HttpRequest) -> HttpResponse:
+    return render(request, 'registration.html')

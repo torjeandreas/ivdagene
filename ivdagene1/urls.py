@@ -24,7 +24,7 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('information', views.information, name="information"),
     path('program', views.program, name="program"),
-
+    path('registration', views.registration, name="registration"),
     # Django Auth
     path('accounts/login', auth_views.LoginView.as_view(template_name="accounts/login.html"), name='login'),
 ]

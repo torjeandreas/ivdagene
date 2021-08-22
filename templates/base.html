@@ -22,9 +22,12 @@
 <link href="{% static '/css/main.css' %}" rel="stylesheet" />
 </head>
 <body>
+
 {% include 'navbar.html' %}
+
 <main id="main">
     {% block content%}
+
     {% endblock %}
 </main>
 <!-- Bootstrap core JS-->
@@ -37,5 +40,5 @@
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
-
+{% include 'footer.html' %}
 </html>
