@@ -124,6 +124,12 @@ ul{
     margin-bottom: 30px;
     font-weight: 500;
     position: relative;
-    background-color: red;
+}
+
+.countdown{
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
 }
 

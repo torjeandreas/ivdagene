@@ -19,6 +19,42 @@
 
 
             </div>
+            <div class="background-countdown">
+        <div class="countdown">
+            <div id="countdown">
+                <ul>
+                    <li><span id="dager"></span>Dager</li>
+                    <li><span id="timerr"></span>Timer</li>
+                    <li><span id="minutter"></span>Minutter</li>
+                    <li><span id="sekunder"></span>Sekunder</li>
+                </ul>
+            </div>
+            <script>
+var countDownDate = new Date("Mar 2, 2022 12:00:00").getTime();
+
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("dager").innerHTML = days,
+        document.getElementById("timerr").innerHTML = hours,
+        document.getElementById("minutter").innerHTML = minutes,
+        document.getElementById("sekunder").innerHTML = seconds
+
+    if(distance < 0){
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+        </div>
+                </div>
+
         </header>
     <div class="container d-flex align-items-center flex column">
 <h1>Hva er ivdagene?</h1>
